@@ -1,0 +1,28 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: gray;
+  max-height: 20px;
+  min-height: 20px;
+}
+
+.links > a {
+  text-decoration: none;
+  color: #fff;
+  background-color: transparent;
+  margin: 20px;
+  transition: all ease-in 0.25s;
+  font-family: ui-sans-serif, system-ui, -apple-system, system-ui, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+
+.links > a:hover {
+  color: lightgreen;
+}
+
+.buttons {
+  margin-right: 25px;
+}
