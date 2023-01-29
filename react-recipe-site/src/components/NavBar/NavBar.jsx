@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import "./NavBar.css";
 
@@ -6,8 +6,12 @@ const NavBar = () => {
   const [Auth, SetAuth] = useState(true);
 
   const updateAuth = () => {
-    SetAuth = !Auth;
+    SetAuth(!Auth);
   };
+
+  useEffect(() => {
+    console.log("Route");
+  }, [Auth]);
 
   return Auth ? (
     <nav className="navigation">
@@ -17,7 +21,7 @@ const NavBar = () => {
         <a href="/manage">Manage</a>
       </div>
       <div className="buttons">
-        <button>Logout</button>
+        <button onClick={() => updateAuth()}>Logout</button>
       </div>
     </nav>
   ) : (
